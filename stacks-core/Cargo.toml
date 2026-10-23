@@ -1,0 +1,33 @@
+[package]
+authors = ["Stacks Foundation <admin@stacks.co>"]
+categories = [
+    "cryptography::cryptocurrencies",
+    "data-structures",
+    "development-tools",
+    "finance",
+]
+description = "Package that exposes primitives for working with the Stacks blockchain"
+edition = "2021"
+keywords = ["blockchain", "stacks", "bitcoin", "blockstack", "sdk"]
+license = "MIT"
+name = "stacks-core"
+readme = "README.md"
+repository = "https://github.com/stacks-network/sbtc"
+version = "0.1.0"
+homepage = "https://www.stacks.co"
+
+[dependencies]
+bdk = { workspace = true, features = ["keys-bip39", "bip39"] }
+hex.workspace = true
+once_cell.workspace = true
+rand.workspace = true
+regex.workspace = true
+ripemd.workspace = true
+serde = { workspace = true, features = ["derive"] }
+sha2.workspace = true
+strum = { workspace = true, features = ["derive"] }
+thiserror.workspace = true
+
+[dev-dependencies]
+hex.workspace = true
+rand.workspace = true

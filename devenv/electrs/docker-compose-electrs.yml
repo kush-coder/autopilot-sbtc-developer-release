@@ -1,0 +1,12 @@
+version: '3.2'
+
+services:
+  electrs:
+    image: electrs:latest
+    container_name: electrs
+    build:
+      context: ./docker
+    ports:
+      - 60401:60401
+      - 3002:3002
+    command: electrs

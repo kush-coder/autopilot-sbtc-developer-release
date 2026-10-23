@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+  sbtc:
+    image: sbtc:latest
+    container_name: sbtc
+    build:
+      context: ./../../
+      dockerfile: ./devenv/sbtc/docker/Dockerfile
+    volumes:
+      - $PWD/docker/config.json:/romeo/config.json
